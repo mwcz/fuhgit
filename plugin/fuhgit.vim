@@ -1,10 +1,10 @@
-" fugit.vim - See file history in Vim
+" fuhgit.vim - See file history in Vim
 " Author: Jon Anderson <squiggs.jonny5@gmail.com>
 function! DisplayRange(commit, commitDiff)
 	windo %d
 	diffoff!
 	wincmd t
-	exe ':silent :0 read !git show '.a:commit.'~'.a:commitDiff.':'.t:path
+	exe ':silent :0 read !git show '.a:commitDiff.':'.t:path
 	exe 'doautocmd filetypedetect BufRead '.t:path
 
 	wincmd l
@@ -12,7 +12,7 @@ function! DisplayRange(commit, commitDiff)
 	exe 'doautocmd filetypedetect BufRead '.t:path
 
 	wincmd j
-	exe ':silent :0 read !git log --stat '.a:commit.'~'.a:commitDiff.'..'.a:commit
+	exe ':silent :0 read !git log --stat '.a:commitDiff.'..'.a:commit
 	setfiletype git
 
 	wincmd t
@@ -53,7 +53,7 @@ function! LeftGoto(pos)
 		return 0
 	endif
 
-	call DisplayRange(t:commits[t:current], t:leftDiff)
+	call DisplayRange(t:commits[t:current], t:commits[t:current - t:leftDiff])
 	return 1
 endfunction
 

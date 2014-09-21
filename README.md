@@ -1,7 +1,9 @@
-fugit
+FUHgit
 =====
 
-A plugin for seeing a file history in vim. Based on Ben Cotterell's git-time-lapse plugin (https://github.com/johntyree/time-lapse.vim) and similar to :Glog functionality in Tim Pope's fugitive plugin (https://github.com/tpope/vim-fugitive).
+File Upstream History - git
+
+A plugin for seeing a git file history in vim. Based on Ben Cotterell's git-time-lapse plugin (https://github.com/johntyree/time-lapse.vim) and similar to :Glog functionality in Tim Pope's fugitive plugin (https://github.com/tpope/vim-fugitive).
 I'm hoping to improve upon the git-time-lapse plugin in several ways:
  * Make it compatible with Tim Pope's pathogen plugin (https://github.com/tpope/vim-pathogen).
  * Allow the user to see the changes over a range of commits instead of a single commit at a time.

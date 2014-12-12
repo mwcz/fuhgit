@@ -40,6 +40,10 @@ function! Display(commit)
 	diffthis
 	wincmd l
 	diffthis
+	" position cursor at the top of the file
+	go 1
+	" move the cursor down to the first diff
+	normal ]c
 endfunction
 
 function! LeftGoto(pos)
